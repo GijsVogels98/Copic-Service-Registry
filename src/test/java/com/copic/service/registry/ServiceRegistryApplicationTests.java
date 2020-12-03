@@ -1,10 +1,10 @@
-package com.copic.service.registery;
+package com.copic.service.registry;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServiceRegisteryApplicationTests {
+class ServiceRegistryApplicationTests {
 
     @Test
     void contextLoads() {
