@@ -20,7 +20,7 @@
 #    fetch-registry: false
 
 server:
-  port: 8761
+  port: ${PORT:8761}
 
 eureka:
   instance:
@@ -29,4 +29,4 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: ${EUREKA_URI:http://${eureka.instance.hostname}:${server.port}/eureka/}
+      defaultZone: ${EUREKA_URL:http://${eureka.instance.hostname}:${server.port}/eureka/}
