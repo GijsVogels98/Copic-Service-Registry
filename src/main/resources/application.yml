@@ -38,7 +38,7 @@ server:
 
 eureka:
   instance:
-    hostname: copic-service-registry
+    hostname: copic-service-registry.herokuapp.com
   client:
     registerWithEureka: false
     fetchRegistry: false
