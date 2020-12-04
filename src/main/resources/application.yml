@@ -19,17 +19,17 @@
 #    register-with-eureka: false
 #    fetch-registry: false
 #
-server:
-  port: ${PORT:8761}
-
-eureka:
-  instance:
-    hostname: ${EUREKA_HOSTNAME:localhost}
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defaultZone: ${EUREKA_URL:http://user:password@localhost:8761}/eureka/
+#server:
+#  port: ${PORT:8761}
+#
+#eureka:
+#  instance:
+#    hostname: ${EUREKA_HOSTNAME:localhost}
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
+#      defaultZone: ${EUREKA_URL:http://user:password@localhost:8761}/eureka/
 
 
 #server:
@@ -43,4 +43,19 @@ eureka:
 #    fetchRegistry: false
 #    serviceUrl:
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+
+
+
+server:
+  port: ${PORT:8761}
+
+eureka:
+  instance:
+    hostname: ${EUREKA_HOSTNAME:localhost}
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: ${EUREKA_URI:http://${eureka.instance.hostname}:${server.port}/eureka/}
 
